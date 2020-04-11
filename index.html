@@ -6,8 +6,8 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Author 1
-Author 2
+Gabriella Colon
+Tim Riedel 
  
 Further Information:
 http://diystream.cns.utexas.edu/
@@ -17,15 +17,174 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+This code creates an app that allows users to see how many symptoms of either covid-19, cold, flu, or allergies they are experiencing. 
  
 Known Issues:
-blah, blah, blah, blah
+This code is copy and pasted from my App 4 and was edited to fit this app. I used various sources to guide me when coding, so format and style might differ throughout. 
 -->
+<head> 
+      <title>Hello World</title>  <!--Title Page.--> 
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
 
-   <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
+<script>
+
+var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+
+//This makes the variable count for covid, cold, flu, and allergies 
+        var covid_count = 0;
+        var cold_count = 0;
+	var flu_count = 0;
+	var allergies_count = 0; 
+	
+//	This function adds adds 1 to the covid count when they click yes or no for a covid symptom.
+        function covidAdd(){ 
+            covid_count = covid_count + 1;
+
+        }
+	
+//	This function adds adds 1 to the cold value when they click yes or no for a cold symptom. 
+        function coldAdd(){
+            cold_count = cold_count + 1;
+        } 
+//	This function adds adds 1 to the flue value when they click yes or no for a flu symptom. 
+        function fluAdd(){
+            flu_count = flu_count + 1;
+        } 
+//	This function adds adds 1 to the allergies value when they click yes or no for an allergies symptom. 
+        function allergiesAdd(){
+            allergies_count = allergies_count + 1;
+        } 
+// This function adds up the symptoms of each sickness when you click results
+	function resultPercentage(){
+		var total = heartattack_count + heartburn_count;
+		var heartattackPercent = (heartattack_count /total) * 100;
+		var heartburnPercent = (heartburn_count /total) * 100;
+		alert ( "Probability it is a heart attack = " + heartattackPercent + " Probability it is heartburn = " + heartburnPercent); 
+	}
+  </script>
+
+<!-- This section determines how the page will look when it is published.--> 
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+   img, object{ /* This section resizes the image on different screens. */ 
+	   max-height:90%;
+	   max-width:90%;
+}
+
+</style>
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Heart attack or heartburn?</h1> <!--First page of app that explains its purpose and how it works.--> 
+</div>
+	
+<div id="content" class="w3-container">
+	<p>Are you feeling like you have heartburn but are worried it could be a heart attack? Answer a few short questions to find out!</p> <!--creates first page and informs users of the contents of the app.-->
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<center><img src="https://www.cardio.com/hs-fs/hubfs/heart%20attack.jpeg?width=556&amp;height=371&amp;name=heart%20attack.jpeg"/></center> <!--This inserts an image on the first page and centers it.-->
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+</div>
+
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1> <!-- creates page 1 header-->
+	</div>
+	
+        <div id="content" class="w3-container">
+	<p>How long have you been experiencing symptoms?</p> <!--Asks first question.-->   
+	<a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a> <!--button that adds 1 to covid count.-->
+        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">Less than 14 days</a> <!-- adds 1 to cold count.-->
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">4-14 days</a> <!-- adds 1 to flu count.--> 
+	<a href="#two"  onclick="allergiesAdd();" class="w3-btn w3-black">Several weeks</a> <!-- adds 1 to allergies count.--
+	</div> <!--content.-->
+	
+</div> 
+	
+<div class="page" id="two">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1> <!--Creates page 2 header-->
+	</div>
+	
+        <div id="content" class="w3-container">
+	<p>Does your pain radiate to the shoulders, neck, or back?</p> <!-- Asks question 2.-->
+	<a href="#three"  onclick="heartattackAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button that clicks to the next page; adds 1 to heart attack count.-->
+        <a href="#three"  onclick="heartburnAdd();" class="w3-btn w3-black">No</a> <!--No button that clicks to the next page; adds 1 to heartburn count.-->
+        </div> <!--content.-->
+
+</div>	
+
+<div class="page" id="three">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1> <!--Creates page 3 header.--> 
+	</div>
+	
+        <div id="content" class="w3-container">
+	<p>Are you cold or sweaty?</p> <!--Asks question 3.--> 
+	<a href="#four"  onclick="heartattackAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes button that clicks to the next page; adds 1 to heart attack count.-->
+        <a href="#four"  onclick="heartburnAdd();" class="w3-btn w3-black">No</a> <!-- No button that clicks to the next page; adds 1 to heartburn count.-->
+        </div> <!--content.--> 
+
+</div> 
+	
+<div class="page" id="four">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1> <!--creates page 4 header.--> 
+	</div>
+	
+        <div id="content" class="w3-container">
+	<p>Is the pain sharp, burning, and below breast bone?</p> <!--Inserted Question 4.-->    
+	<a href="#five"  onclick="heartburnAdd();" class="w3-btn w3-black"> Yes</a> <!--Yes button that clicks to the next page; adds 1 to heartburn count.-->
+        <a href="#five"  onclick="heartattackAdd();" class="w3-btn w3-black">No</a> <!-- No button that clicks to the next page; adds 1 to heart attack count.-->
+        </div> <!--content.-->
+
+</div>
+	
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Results</h1> <!--creates results header.-->
+	</div>
+	
+	<div id="content" class="w3-container">
+	</div>
+	<a class="w3-btn w3-black" onclick="resultPercentage()"> Results</a> <!--Results button that when clicked on, triggers an alert to pop up with the percentage of either a heart attack or heartburn.-->
+</div>
+	
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p> <!-- Produces DIY! footer on every page.-->
+</footer>
+
+</body>
+</html>   
+	   
 	   
    </body>
 </html>
