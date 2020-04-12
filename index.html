@@ -61,11 +61,11 @@ console.log("This file last modified " + docMod); // generates message in javaSc
             allergies_count = allergies_count + 1;
         } 
 // This function adds up the symptoms of each sickness when you click results
-	function resultPercentage(){
-		var total = heartattack_count + heartburn_count;
-		var heartattackPercent = (heartattack_count /total) * 100;
-		var heartburnPercent = (heartburn_count /total) * 100;
-		alert ( "Probability it is a heart attack = " + heartattackPercent + " Probability it is heartburn = " + heartburnPercent); 
+	function draw_a() {
+	var c = document.getElementById("myCanvas"); //finds the <canvas>
+	var ctx = c.getContext("2d"); //fills the string "2d" to the getContext() method
+	ctx.font = "30px Arial"; //chooses the font
+	ctx.fillText("covid_count", 10, 50);//draws the text
 	}
   </script>
 
@@ -252,7 +252,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	</div>
 	
         <div id="content" class="w3-container">
-	<p>Have you been experiecning diarrhea?</p> <!--Asks eleventh question.-->   
+	<p>Have you been experiencing diarrhea?</p> <!--Asks eleventh question.-->   
 	<a href="#twelve"  onclick="covidAdd();" class="w3-btn w3-black">Yes</a> <!--button that adds 1 to covid count.-->
         <a href="#twelve"  onclick="fluAdd();" class="w3-btn w3-black">Yes (for a child)</a> <!-- adds 1 to flu count.--> 
 	<a href="#twelve"  onclick="allergiesAdd(); coldAdd()" class="w3-btn w3-black">No</a> <!-- adds 1 to allergies and cold count.--
@@ -264,8 +264,15 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	</div>
 	
 	<div id="content" class="w3-container">
-	</div>
-	<a class="w3-btn w3-black" onclick="resultPercentage()"> Results</a> <!--Results button that when clicked on, triggers an alert to pop up with the percentage of either a heart attack or heartburn.-->
+		<p>Click on each sickness to reveal how many symptoms of each you are experiencing!</p> <!-- instructs user on how to display results-->
+	<p> <canvas id="myCanvas" width="750" height="450" style="border:1px solid #000000;">
+	</canvas> <!--This should create a blank canvas with a border.--> </p>
+	<a class="w3-btn w3-black" onclick="draw_a()"> Covid-19</a> <!--creates a button to draw a rectangle onto the canvas and calls the draw_b() function on click-->
+	<a class="w3-btn w3-black" onclick="draw_b()"> Cold</a> <!-- creates a button to draw "Gabriella" onto the canvas and calls the draw_c() function on click--> 
+	<a class="w3-btn w3-black" onclick="draw_c()"> Flu</a> <!-- creates a button to insert an image onto the canvas and calls the draw_d() function on click--> 
+	<a class="w3-btn w3-black" onclick="draw_d()"> Allergies</a>
+	<a class="w3-btn w3-black" onclick="draw_e()"> Clear</a> <!-- creates a button to clear the canvas and calls the draw_e() function on click--> 
+	
 </div>
 
 	
