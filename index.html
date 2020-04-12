@@ -217,9 +217,48 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<p>Are you feeling tired or weak?</p> <!--Asks eight question.-->   
 	<a href="#nine"  onclick="covidAdd();coldAdd();fluAdd();allergiesAdd();" class="w3-btn w3-black">Yes</a> <!--button that adds 1 to covid, flu, cold, and allergies count.-->
         <a href="#nine" class="w3-btn w3-black">No</a> 
-
 	</div> <!--content.-->
-<div class="page" id="five">
+</div>
+	
+<div class="page" id="nine">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 9</h1> <!-- creates page 9 header-->
+	</div>
+	
+        <div id="content" class="w3-container">
+	<p>Are you experiencing headaches?</p> <!--Asks ninth question.-->   
+	<a href="#ten"  onclick="covidAdd(); coldAdd();" class="w3-btn w3-black">Yes</a> <!--button that adds 1 to covid and cold count.-->
+        <a href="#ten"  onclick="allergiesAdd();" class="w3-btn w3-black">Yes, a sinus headache</a> <!-- adds 1 to allergies count.-->
+	<a href="#ten"  onclick="fluAdd();" class="w3-btn w3-black">No</a> <!-- adds 1 to flu count.--> 
+	</div> <!--content.-->
+</div>
+
+<div class="page" id="ten">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 10</h1> <!-- creates page 10 header-->
+	</div>
+	
+        <div id="content" class="w3-container">
+	<p>Do you have body aches and pains?</p> <!--Asks tenth question.-->   
+	<a href="#eleven"  onclick="covidAdd();" class="w3-btn w3-black">Sometimes</a> <!--button that adds 1 to covid count.-->
+        <a href="#eleven"  onclick="coldAdd(); fluAdd()" class="w3-btn w3-black">Yes</a> <!-- adds 1 to cold and flucount.--> 
+	<a href="#eleven"  onclick="allergiesAdd();" class="w3-btn w3-black">No</a> <!-- adds 1 to allergies count.--
+	</div> <!--content.-->
+</div>
+
+<div class="page" id="eleven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 11</h1> <!-- creates page 11 header-->
+	</div>
+	
+        <div id="content" class="w3-container">
+	<p>Have you been experiecning diarrhea?</p> <!--Asks eleventh question.-->   
+	<a href="#twelve"  onclick="covidAdd();" class="w3-btn w3-black">Yes</a> <!--button that adds 1 to covid count.-->
+        <a href="#twelve"  onclick="fluAdd();" class="w3-btn w3-black">Yes (for a child)</a> <!-- adds 1 to flu count.--> 
+	<a href="#twelve"  onclick="allergiesAdd(); coldAdd()" class="w3-btn w3-black">No</a> <!-- adds 1 to allergies and cold count.--
+	</div> <!--content.-->
+
+<div class="page" id="twelve">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1> <!--creates results header.-->
 	</div>
