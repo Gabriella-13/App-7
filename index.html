@@ -65,28 +65,28 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	var c = document.getElementById("myCanvas"); //finds the <canvas>
 	var ctx = c.getContext("2d"); //fills the string "2d" to the getContext() method
 	ctx.font = "60px Arial"; //chooses the font
-	ctx.fillText(covid_count, 10, 225);//draws the text
+	ctx.fillText(covid_count, 50, 225);//draws the text
 	}
 // function to display cold symptom count	
 	function draw_b() {
 	var c = document.getElementById("myCanvas"); //finds the <canvas>
 	var ctx = c.getContext("2d"); //fills the string "2d" to the getContext() method
 	ctx.font = "60px Arial"; //chooses the font
-	ctx.fillText(cold_count, 60, 225);//draws the text
+	ctx.fillText(cold_count, 266, 225);//draws the text
 	}
 // function to display flu symptom count	
 	function draw_c() {
 	var c = document.getElementById("myCanvas"); //finds the <canvas>
 	var ctx = c.getContext("2d"); //fills the string "2d" to the getContext() method
 	ctx.font = "60px Arial"; //chooses the font
-	ctx.fillText(flu_count, 110, 225);//draws the text
+	ctx.fillText(flu_count, 482, 225);//draws the text
 	}
 //function to display allergy symptom count	
 	function draw_d() {
 	var c = document.getElementById("myCanvas"); //finds the <canvas>
 	var ctx = c.getContext("2d"); //fills the string "2d" to the getContext() method
 	ctx.font = "60px Arial"; //chooses the font
-	ctx.fillText(allergies_count, 160, 225);//draws the text
+	ctx.fillText(allergies_count, 700, 225);//draws the text
 	}
 //Function to clear the canvas
 	function draw_e() {
@@ -118,23 +118,23 @@ console.log("This file last modified " + docMod); // generates message in javaSc
     z-index: 1;
 }
    img, object{ /* This section resizes the image on different screens. */ 
-	   max-height:90%;
-	   max-width:90%;
+	   max-height:75%;
+	   max-width:75%;
 }
 
 </style>
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Heart attack or heartburn?</h1> <!--First page of app that explains its purpose and how it works.--> 
+	<h1>What illness do you have?</h1> <!--First page of app that explains its purpose and how it works.--> 
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you have heartburn but are worried it could be a heart attack? Answer a few short questions to find out!</p> <!--creates first page and informs users of the contents of the app.-->
+	<p>Are you worried you might have Covid-19 in light of the pandemic? Answer the following questions to determine which illness you have the most symptoms of out of Covid-19, a cold, the flu, or seasonal allergies!</p> <!--creates first page and informs users of the contents of the app.-->
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
-	<center><img src="https://www.cardio.com/hs-fs/hubfs/heart%20attack.jpeg?width=556&amp;height=371&amp;name=heart%20attack.jpeg"/></center> <!--This inserts an image on the first page and centers it.-->
+	<center><img src="https://ewscripps.brightspotcdn.com/dims4/default/7671677/2147483647/strip/true/crop/1303x733+15+0/resize/1280x720!/quality/90/?url=https%3A%2F%2Fewscripps.brightspotcdn.com%2F0a%2Ff2%2F72b1b4d94794992a0772cb593ce5%2Fscreen-shot-2020-02-25-at-10.49.27%20AM.png"/></center> <!--This inserts an image on the first page and centers it.-->
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
