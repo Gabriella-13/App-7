@@ -60,13 +60,40 @@ console.log("This file last modified " + docMod); // generates message in javaSc
         function allergiesAdd(){
             allergies_count = allergies_count + 1;
         } 
-// This function adds up the symptoms of each sickness when you click results
+// function to display covid symptom count
 	function draw_a() {
 	var c = document.getElementById("myCanvas"); //finds the <canvas>
 	var ctx = c.getContext("2d"); //fills the string "2d" to the getContext() method
 	ctx.font = "30px Arial"; //chooses the font
 	ctx.fillText(covid_count, 10, 50);//draws the text
 	}
+// function to display cold symptom count	
+	function draw_b() {
+	var c = document.getElementById("myCanvas"); //finds the <canvas>
+	var ctx = c.getContext("2d"); //fills the string "2d" to the getContext() method
+	ctx.font = "30px Arial"; //chooses the font
+	ctx.fillText(cold_count, 20, 50);//draws the text
+	}
+// function to display flu symptom count	
+	function draw_c() {
+	var c = document.getElementById("myCanvas"); //finds the <canvas>
+	var ctx = c.getContext("2d"); //fills the string "2d" to the getContext() method
+	ctx.font = "30px Arial"; //chooses the font
+	ctx.fillText(flu_count, 30, 50);//draws the text
+	}
+//function to display allergy symptom count	
+	function draw_d() {
+	var c = document.getElementById("myCanvas"); //finds the <canvas>
+	var ctx = c.getContext("2d"); //fills the string "2d" to the getContext() method
+	ctx.font = "30px Arial"; //chooses the font
+	ctx.fillText(allergies_count, 40, 50);//draws the text
+	}
+//Function to clear the canvas
+	function draw_e() {
+  	var canvas = document.getElementById("myCanvas"); //finds <canvas>
+ 	var context = canvas.getContext("2d");//fills the string "2d" to the getContext() method
+  	context.clearRect(0, 0, canvas.width, canvas.height); //clears the entire canvas
+        }; 
   </script>
 
 <!-- This section determines how the page will look when it is published.--> 
@@ -150,7 +177,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
         <div id="content" class="w3-container">
 	<p>Are you experiencing shortness of breath?</p> <!--Asks question 3.--> 
-	<a href="#four"  onclick="covidAdd();" class="w3-btn w3-black">Sometimes</a> <!--button that adds 1 to covid count.-->
+	<a href="#four"  onclick="covidAdd();" class="w3-btn w3-black">Yes</a> <!--button that adds 1 to covid count.-->
         <a href="#four"  onclick="coldAdd(); fluAdd(); allergiesAdd()" class="w3-btn w3-black">No</a> <!-- adds 1 to cold, flu, and allergies count.-->
         </div> <!--content.--> 
 
@@ -267,10 +294,10 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 		<p>Click on each sickness to reveal how many symptoms of each you are experiencing!</p> <!-- instructs user on how to display results-->
 	<p> <canvas id="myCanvas" width="750" height="450" style="border:1px solid #000000;">
 	</canvas> <!--This should create a blank canvas with a border.--> </p>
-	<a class="w3-btn w3-black" onclick="draw_a()"> Covid-19</a> <!--creates a button to draw a rectangle onto the canvas and calls the draw_b() function on click-->
-	<a class="w3-btn w3-black" onclick="draw_b()"> Cold</a> <!-- creates a button to draw "Gabriella" onto the canvas and calls the draw_c() function on click--> 
-	<a class="w3-btn w3-black" onclick="draw_c()"> Flu</a> <!-- creates a button to insert an image onto the canvas and calls the draw_d() function on click--> 
-	<a class="w3-btn w3-black" onclick="draw_d()"> Allergies</a>
+	<a class="w3-btn w3-black" onclick="draw_a()"> Covid-19</a> <!--creates a button to display how many covid symptoms and calls the draw_a() function on click-->
+	<a class="w3-btn w3-black" onclick="draw_b()"> Cold</a> <!-- creates a button to display how many cold symptoms and calls the draw_b() function on click--> 
+	<a class="w3-btn w3-black" onclick="draw_c()"> Flu</a> <!-- creates a button to display how many flu symptoms and calls the draw_c() function on click--> 
+	<a class="w3-btn w3-black" onclick="draw_d()"> Allergies</a> <!-- creates a button to display how many allergy symptoms and calls the draw_d() function on click-->
 	<a class="w3-btn w3-black" onclick="draw_e()"> Clear</a> <!-- creates a button to clear the canvas and calls the draw_e() function on click--> 
 	
 </div>
