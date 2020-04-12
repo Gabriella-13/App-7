@@ -123,7 +123,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	<p>How long have you been experiencing symptoms?</p> <!--Asks first question.-->   
 	<a href="#two"  onclick="covidAdd();" class="w3-btn w3-black">7-25 days</a> <!--button that adds 1 to covid count.-->
         <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">Less than 14 days</a> <!-- adds 1 to cold count.-->
-        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">4-14 days</a> <!-- adds 1 to flu count.--> 
+        <a href="#two"  onclick="fluAdd();" class="w3-btn w3-black">7-14 days</a> <!-- adds 1 to flu count.--> 
 	<a href="#two"  onclick="allergiesAdd();" class="w3-btn w3-black">Several weeks</a> <!-- adds 1 to allergies count.--
 	</div> <!--content.-->
 	
@@ -137,7 +137,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
         <div id="content" class="w3-container">
 	<p>Are you experiencing a cough?</p> <!-- Asks question 2.-->
 	<a href="#three"  onclick="covidAdd(); fluAdd()" class="w3-btn w3-black"> Yes, a dry cough</a> <!--button that adds 1 to covid count and 1 to flu.-->
-        <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes, mild</a> <!-- adds 1 to cold count.-->
+        <a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes, a mild cough</a> <!-- adds 1 to cold count.-->
 	<a href="#three"  onclick="allergiesAdd();" class="w3-btn w3-black">No</a> <!-- adds 1 to allergies count.--
         </div> <!--content.-->
 
@@ -163,12 +163,50 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
         <div id="content" class="w3-container">
 	<p>Have you been sneezing?</p> <!--Inserted Question 4.-->    
-	<a href="#five"  onclick="covidAdd(); fluAdd(); " class="w3-btn w3-black">No</a> <!--button that adds 1 to covid and flu count.-->
-        <a href="#five"  onclick="coldAdd(); allergiesAdd" class="w3-btn w3-black">Yes</a> <!-- adds 1 to cold and allergies count.-->
+	<a href="#five"  onclick="coldAdd(); allergiesAdd()" class="w3-btn w3-black">Yes</a> <!-- adds 1 to cold and allergies count.-->
+        <a href="#five"  onclick="covidAdd(); fluAdd(); " class="w3-btn w3-black">No</a> <!--button that adds 1 to covid and flu count.-->
         </div> <!--content.-->
 
 </div>
+
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1> <!-- creates page 5 header-->
+	</div>
 	
+        <div id="content" class="w3-container">
+	<p>Do you have a runny or stuffy nose?</p> <!--Asks fifth question.-->   
+        <a href="#six"  onclick="coldAdd(); allergiesAdd(); fluAdd()" class="w3-btn w3-black">Yes</a> <!-- adds 1 to cold, allergies, and flu count.-->
+	<a href="#six"  onclick="covidAdd();" class="w3-btn w3-black">No</a> <!--button that adds 1 to covid count.-->
+	</div> <!--content.-->
+
+</div>
+
+
+<div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1> <!-- creates page 6 header-->
+	</div>
+	
+        <div id="content" class="w3-container">
+	<p>Do you have a sore throat?</p> <!--Asks sixth question.-->   
+        <a href="#seven"  onclick="covidAdd(); fluAdd(); coldAdd()" class="w3-btn w3-black">Yes</a> <!-- adds 1 to covid, flu, and cold count.-->
+	<a href="#seven"  onclick="covidAdd(); allergiesAdd()" class="w3-btn w3-black">Yes, mild sore throat</a> <!--button that adds 1 to allergies count.-->
+	</div> <!--content.-->
+</div>
+
+<div class="page" id="seven">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 7</h1> <!-- creates page 7 header-->
+	</div>
+	
+        <div id="content" class="w3-container">
+	<p>Do you have a fever?</p> <!--Asks first question.-->   
+	<a href="#eight"  onclick="covidAdd(); fluAdd()" class="w3-btn w3-black">Yes</a> <!--button that adds 1 to covid and flu count.-->
+        <a href="#eight"  onclick="coldAdd();" class="w3-btn w3-black">Yes, for a short period</a> <!-- adds 1 to cold count.-->
+	<a href="#eight"  onclick="allergiesAdd();" class="w3-btn w3-black">No</a> <!-- adds 1 to allergies count.--> 
+	</div> <!--content.-->
+</div>
 <div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1> <!--creates results header.-->
@@ -178,6 +216,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	</div>
 	<a class="w3-btn w3-black" onclick="resultPercentage()"> Results</a> <!--Results button that when clicked on, triggers an alert to pop up with the percentage of either a heart attack or heartburn.-->
 </div>
+
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p> <!-- Produces DIY! footer on every page.-->
